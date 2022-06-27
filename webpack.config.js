@@ -20,6 +20,21 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(png|jpg|gif|svg)/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[name].[ext]'
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -28,7 +43,7 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, '/dist'),
+            directory: path.join(__dirname, '/dist'),
         },
         open: true,
         port: 3000
@@ -36,4 +51,4 @@ module.exports = {
     plugins: [
         htmlPlugin
     ]
-}
+};
