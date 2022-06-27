@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <header>
-            <a href="./index.html">
+            <a href="./">
             <img id="header_logo" src={`./images/logo.png`}/>
             </a>
             <div id="header_bar1">
@@ -19,7 +19,7 @@ const Header = () => {
             <div id="header_navbar">
                 <a className="header_navbar_item" href="./category.html">カテゴリーから探す</a>
                 <a className="header_navbar_item" href="./recent.html">最近チェックした商品</a>
-                <a className="header_navbar_item" href="./login.html">マイページ</a>
+                <a className="header_navbar_item" href="./login">マイページ</a>
             </div>
         </header>
     );

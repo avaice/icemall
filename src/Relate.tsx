@@ -1,12 +1,12 @@
 import React from 'react';
 import Item from './Item';
 
-const Recommend = () => {
+const Relate = () => {
     return (
         <div>
-            <h1>おすすめ商品</h1>
+            <h1>関連する商品</h1>
             <div className="items">
-                <Item url="item?id=testdata" image="./images/item_sample.png" name="すてきな本" price={3000} />
+                <Item />
                 <Item />
                 <Item />
                 <Item />
@@ -15,4 +15,4 @@ const Recommend = () => {
     );
 }
 
-export default Recommend;
+export default Relate;

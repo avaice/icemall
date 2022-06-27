@@ -55,7 +55,6 @@
 }
 #itemDetail #itemDetail_command #itemDetail_addCart:hover{
     background-color: var(--color-cart-hover);
-    transform: scale(1.01);
     cursor: pointer;
 }
 

@@ -1,10 +1,6 @@
 const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const htmlPlugin = new HtmlWebpackPlugin({
-    template: "./public/index.html",
-    filename: "index.html",
-})
 
 
 module.exports = {
@@ -46,9 +42,15 @@ module.exports = {
             directory: path.join(__dirname, '/dist'),
         },
         open: true,
-        port: 3000
+        port: 3000,
+        historyApiFallback: true
     },
     plugins: [
-        htmlPlugin
+        
+        new HtmlWebpackPlugin({
+            template: "./public/index.html",
+            filename: "index.html",
+        })
+        
     ]
 };
