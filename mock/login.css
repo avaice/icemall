@@ -1,0 +1,20 @@
+#loginForm{
+    text-align: center;
+}
+
+#loginForm input{
+    margin-top:10px;
+    width:400px;
+    font-size:24px;
+    height:25px;
+    padding:10px;
+    max-width:calc(100% - 20px);
+}
+
+#loginForm #submitBtn{
+    margin-top:20px;
+    width:400px;
+    max-width:calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+}
