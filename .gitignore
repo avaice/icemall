@@ -1,2 +1,5 @@
 #いらないフォルダ
 node_modules/
+
+#githubに上がっちゃったら大問題☆
+*.db

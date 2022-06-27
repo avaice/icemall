@@ -4,7 +4,7 @@ import Item from './Item';
 const Recent = () => {
     return (
         <div>
-            <h1>最近チェックした商品</h1>
+            <h2>最近チェックした商品</h2>
             <div className="items">
                 <Item />
                 <Item />

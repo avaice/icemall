@@ -4,7 +4,7 @@ import Item from './Item';
 const Relate = () => {
     return (
         <div>
-            <h1>関連する商品</h1>
+            <h2>関連する商品</h2>
             <div className="items">
                 <Item />
                 <Item />
