@@ -5,6 +5,7 @@ import Header from './src/Header';
 import Footer from './src/Footer';
 
 import HomePage from './src/HomePage';
+import AddItemPage from './src/AddItemPage';
 import ItemPage from './src/ItemPage';
 import LoginPage from './src/LoginPage';
 import AdminPage from './src/AdminPage';
@@ -38,6 +39,7 @@ root.render(
             <Route path={Settings.basepath + "login"} element={<LoginPage />} />
             <Route path={Settings.basepath + "mypage"} element={<AdminPage />} />
             <Route path={Settings.basepath + "admin_main"} element={<AdminMainPage />} />
+            <Route path={Settings.basepath + "additem"} element={<AddItemPage />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
         </BrowserRouter>

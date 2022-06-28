@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icemall - mock(addproduct)</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="item.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img id="header_logo" src="./logo.png">
+        </a>
+        <div id="header_bar1">
+            <form id="header_bar1_searchbar" action="./search" method="get">
+                <input type="text" name="q" placeholder="なにがほしい？">
+                <a href="javascript:form1.submit()" class="material-icons">search</a>
+            </form>
+            <div id="header_bar1_cart" class="btn material-icons">
+                shopping_cart
+            </div>
+        </div>
+
+        <div id="header_navbar">
+            <a class="header_navbar_item" href="./category.html">カテゴリーから探す</a>
+            <a class="header_navbar_item" href="./recent.html">最近チェックした商品</a>
+            <a class="header_navbar_item" href="./login.html">マイページ</a>
+        </div>
+    </header>
+    <main>
+        <div id="itemDetail">
+            <div id="itemDetail_img">
+                <img class="placeholder">
+            </div>
+            <div id="itemDetail_command">
+                <h2 id="itemDetail_title" class="placeholder">　　　　　　　　　　</h2>
+                <p id="itemDetail_zaiko">在庫あり</p>
+                <p id="itemDetail_price">10,000円(税込)</p>
+                <div id="itemDetail_addCart">
+                    カートに入れる
+                </div>
+            </div>
+        </div>
+        <div id="itemDesc">
+            <h2>商品説明</h2>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+            <p class="placeholder">　　　　　　　　　　　　　　　　　　　　　</p>
+        </div>
+
+        <h2>関連する商品</h2>
+        <div class="items">
+            <div class="item">
+                <a href="./item?id=0000" target="_blank" rel="noopener noreferrer"></a>
+                <img class="placeholder">
+                <p class="placeholder">　　　　</p>
+                <p class="price placeholder" style="font-weight:bold;">　　　　</p>
+            </div>
+            <div class="item">
+                <a href="./item?id=0000" target="_blank" rel="noopener noreferrer"></a>
+                <img class="placeholder">
+                <p class="placeholder">　　　　</p>
+                <p class="price placeholder" style="font-weight:bold;">　　　　</p>
+            </div>
+            <div class="item">
+                <a href="./item?id=0000" target="_blank" rel="noopener noreferrer"></a>
+                <img class="placeholder">
+                <p class="placeholder">　　　　</p>
+                <p class="price placeholder" style="font-weight:bold;">　　　　</p>
+            </div>
+            <div class="item">
+                <a href="./item?id=0000" target="_blank" rel="noopener noreferrer"></a>
+                <img class="placeholder">
+                <p class="placeholder">　　　　</p>
+                <p class="price placeholder" style="font-weight:bold;">　　　　</p>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>(C)2022 /*icemall*/</p>
+        <p>このサイトはダミーページです。実際に購入はできません。</p>
+    </footer>
+</body>
+</html>

@@ -15,7 +15,7 @@ if(isset($_POST["key"]) && isset($_SESSION["key"])){
         $return["status"] = "OK";
         $return["response"] = "Success.";
     }else{
-        $return["response"] = "APIキーが間違っています。正しくは".$_SESSION["key"];
+        $return["response"] = "APIキーが間違っています。";
     }
 }else{
     $return["response"] = "APIキーが指定されていません。";
