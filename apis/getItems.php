@@ -26,7 +26,7 @@ $search_option = array(
 
 $items_db = sqlite_open("./database/items.db", 0666);
 if($items_db){
-    $queryStr = sprintf('SELECT * FROM items WHERE id=%s AND genre=%s AND name=%s AND stock >= %s AND price >= %s AND price <= %s AND number >= %s LIMIT %s',
+    $queryStr = sprintf('SELECT * FROM items WHERE id=%s AND genre=%s AND name=%s AND stock >= %s AND price >= %s AND price <= %s AND number >= %s ORDER BY number DESC LIMIT %s',
         $search_option["id"] == "*" ? 'id' : '"'.$search_option["id"].'"',
         $search_option["genre"] == "*" ? 'genre' : $search_option["genre"],
         $search_option["name"] == "*" ? 'name' : '"'.$search_option["name"].'"',

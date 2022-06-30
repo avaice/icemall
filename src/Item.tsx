@@ -8,6 +8,17 @@ export type ItemType = {
     price?:number
 }
 
+export interface ItemObject{
+    id:string;
+    genre:number;
+    date:string;
+    name:string;
+    desc:string;
+    price:number;
+    stock:number;
+    image:string;
+}
+
 const Item = (props:ItemType) => {
     return (
         <div className="item">

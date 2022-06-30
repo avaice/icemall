@@ -12,6 +12,25 @@ class Settings{
         if (!key)return "NOT_LOGINED";
         return key;
     }
+    static setRecent = (arg:string) => {
+        let recent : string[] = this.getRecent();
+        if(!recent.includes(arg)){
+            recent.unshift(arg);
+            if(recent.length > 10){
+                recent = recent.slice(0, -1);
+            }
+            localStorage.setItem("icemall_recent", JSON.stringify(recent));
+        }
+    }
+    static getRecent = () => {
+        const savedata = localStorage.getItem("icemall_recent");
+        let recent : string[];
+        if(!savedata)
+            recent = [];
+        else
+            recent = JSON.parse(savedata);
+        return recent;
+    }
 }
 
 

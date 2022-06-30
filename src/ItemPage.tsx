@@ -32,6 +32,7 @@ const ItemPage = () => {
         ),
         stock:-1,
         price:-1,
+        genre:-1,
         imgElm:<img className="placeholder"/>
     }
     const [itemState, setItemState] = useState(placeHolder);
@@ -57,6 +58,8 @@ const ItemPage = () => {
                     _copyState.price = parseInt(result["response"]["items"][0]["price"]);
                     _copyState.desc = <div dangerouslySetInnerHTML={{__html : result["response"]["items"][0]["desc"]}}></div>;
                     _copyState.imgElm = <img src={Settings.apipath + result["response"]["items"][0]["image"]}/>;
+                    _copyState.genre = parseInt(result["response"]["items"][0]["genre"]);
+                    Settings.setRecent(result["response"]["items"][0]["id"]);
                 }else{
                     _copyState.title = "商品が見つかりませんでした";
                     _copyState.desc = <p>存在しない商品か、削除された可能性があります。</p>;
@@ -84,7 +87,7 @@ const ItemPage = () => {
                 <div id="itemDetail_command">
                     <h2 id="itemDetail_title">{itemState.title}</h2>
                     <p id="itemDetail_zaiko">在庫数:{itemState.stock != -1 ? itemState.stock : <span className="placeholder">　　</span>}</p>
-                    <p id="itemDetail_price">{itemState.price != -1 ? itemState.price * Settings.tax : <span className="placeholder">　　　　</span>}円(税込)</p>
+                    <p id="itemDetail_price">{itemState.price != -1 ? Math.floor(itemState.price * Settings.tax).toLocaleString() : <span className="placeholder">　　　　</span>}円(税込)</p>
                     <div id="itemDetail_addCart">
                         カートに入れる
                     </div>
@@ -95,7 +98,7 @@ const ItemPage = () => {
                 {itemState.desc}
             </div>
 
-            <Relate />
+            <Relate genre={0}/>
         </main>
     );
 }
