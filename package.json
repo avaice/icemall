@@ -21,9 +21,11 @@
   },
   "homepage": "https://cho-ice.xyz/lab/iceshop/",
   "dependencies": {
+    "@types/circular-json": "^0.4.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/react-router-dom": "^5.3.3",
+    "circular-json": "^0.5.9",
     "draft-js": "^0.11.7",
     "html-webpack-plugin": "^5.5.0",
     "immutable": "^4.1.0",
@@ -38,9 +40,12 @@
     "webpack-dev-server": "^4.9.2"
   },
   "devDependencies": {
+    "@types/draft-convert": "^2.1.4",
     "@types/react-draft-wysiwyg": "^1.13.4",
     "css-loader": "^6.7.1",
+    "draft-convert": "^2.1.12",
     "file-loader": "^6.2.0",
+    "json-cyclic": "^1.0.2",
     "style-loader": "^3.3.1"
   }
 }

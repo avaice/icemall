@@ -40,7 +40,12 @@ if(isset($_POST["key"]) && isset($_FILES["image"]) && isset($_SESSION["key"])){
         $return["response"] = "APIキーが間違っています。";
     }
 }else{
-    $return["response"] = "APIキーが指定されていません。";
+    //セッション切れ判定
+    if(!isset($_SESSION["key"])){
+        $return["response"] = "セッションが無効です。";
+    }else{
+        $return["response"] = "パラメーターが不足してます。";
+    }
 }
 
 

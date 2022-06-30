@@ -1,5 +1,5 @@
 <?php
-$debug = false;
+$debug = true;
 
 if($debug){
     header("Access-Control-Allow-Origin: *");
