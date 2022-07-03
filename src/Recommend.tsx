@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Item, {ItemObject} from './Item';
+import Item, {ItemObject, _ItemPlaceHolder} from './Item';
 import Settings from './Settings';
 
 let placeHolder:ItemObject[] = [];
@@ -21,7 +21,7 @@ const Recommend = () => {
     if(!GotData){
         const formData = new FormData();
         formData.append('key', Settings.getApiKey());
-        formData.append('getCount', "10");
+        formData.append('getCount', "12");
         fetch(new Request(Settings.apipath + "getItems.php", {
             method: 'POST',
             body: formData
@@ -51,8 +51,8 @@ const Recommend = () => {
             <div className="items">
                 {
                     itemsList ? itemsList.map(item => (
-                        item.name == "loading" ? "Loading..." : item.name == "none" ? "ありません" :<Item name={item.name} price={item.price} image={Settings.apipath + item.image} url={"./item?id=" + item.id} key={item.id}/>
-                    )) : "Loading..."
+                        item.name == "loading" ? _ItemPlaceHolder : item.name == "none" ? "ありません" :<Item name={item.name} price={item.price} image={Settings.apipath + item.image} url={"./item?id=" + item.id} key={item.id}/>
+                    )) : _ItemPlaceHolder
                 }
             </div>
         </div>

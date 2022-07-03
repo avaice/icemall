@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Item, {ItemObject} from './Item';
+import Item, {ItemObject, _ItemPlaceHolder} from './Item';
 import Settings from './Settings';
 
 let placeHolder:ItemObject[] = [];
@@ -13,7 +13,12 @@ stock:0,
 image:""};
 let GotData = false;
 let n = 0;
-const Recent = () => {
+
+interface RecentProps{
+    option : string | null;
+}
+
+const Recent = (props : RecentProps) => {
     const [itemsList, setItemsList] = useState(placeHolder);
 
     let _itemsList : ItemObject[] = [];
@@ -51,11 +56,11 @@ const Recent = () => {
     return (
         <div>
             <h2>最近チェックした商品</h2>
-            <div className="items">
+            <div className={props.option == "wrap" ? "items-wrap items" : "items"}>
                 {
                     itemsList ? itemsList.map(item => (
-                        item.name == "loading" ? "Loading..." : item.name == "none" ? "ありません" :<Item name={item.name} price={item.price} image={Settings.apipath + item.image} url={"./item?id=" + item.id} key={item.id}/>
-                    )) : "Loading..."
+                        item.name == "loading" ? _ItemPlaceHolder : item.name == "none" ? "ありません" :<Item name={item.name} price={item.price} image={Settings.apipath + item.image} url={"./item?id=" + item.id} key={item.id}/>
+                    )) : _ItemPlaceHolder
                 }
             </div>
         </div>

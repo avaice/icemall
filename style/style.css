@@ -14,7 +14,7 @@ body{
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-input{
+input,select{
     padding:0px 10px;
     border-radius: var(--def-border-radius);
     border:none;
@@ -219,8 +219,8 @@ footer{
     .items{
         justify-content: center;
         flex-wrap: wrap;
-        
     }
+    
     .item{
         width:calc(25% - 20px);
     }
@@ -234,6 +234,10 @@ footer{
 @media only screen and (max-width:700px) {
     .item{
         width:calc(50% - 20px);
-        min-width:200px;
+        min-width:250px;
+    }
+    .items-wrap{
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }

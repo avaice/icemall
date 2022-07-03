@@ -42,6 +42,19 @@ const AddItemPage = () => {
     const search = useLocation().search;
     const query = new URLSearchParams(search);
 
+    Settings.getGenreList((genreList) => {
+        console.log(genreList)
+        let n=0;
+        let selectEle = "";
+        const selectDom = document.getElementById("item_genre");
+        if(!selectDom)return alert("商品ジャンルの取得に失敗しました");
+        genreList["genre"].forEach((element:string) => {
+            selectEle = selectEle + `<option value=${n}>${element}</option>`;
+            n++;
+        });
+        selectDom.innerHTML = selectEle;
+    })
+
     return (
         <main>
             <h2>商品の追加</h2>
@@ -52,6 +65,8 @@ const AddItemPage = () => {
                 </div>
                 <div id="itemDetail_command">
                     <input id="item_title" type="text" placeholder='商品名'></input>
+                    ジャンル：<select id="item_genre">
+                    </select><br/>
                     <input id="item_zaiko" type="number" defaultValue='1'></input>個
                     <input id="item_price" type="number" placeholder='価格（税抜き）'></input>円
                     <input id="item_image" type="hidden"></input>
@@ -75,16 +90,17 @@ const uploadItem = () => {
 
     const itemTitleElm : HTMLInputElement | null = document.querySelector("#item_title");
     const itemZaikoElm : HTMLInputElement | null = document.querySelector("#item_zaiko");
+    const itemGenreElm : HTMLSelectElement | null = document.querySelector("#item_genre");
     const itemPriceElm : HTMLInputElement | null = document.querySelector("#item_price");
     const itemImageElm : HTMLInputElement | null = document.querySelector("#item_image");
     const itemDescElm : HTMLInputElement | null = document.querySelector("#item_desc");
     const itemIdElm : HTMLInputElement | null = document.querySelector("#item_id");
-    if(!itemTitleElm || !itemZaikoElm || !itemPriceElm || !itemImageElm || !itemIdElm || !itemDescElm)return alert("エラー:商品情報入力フォームのDOMが見つかりません");
+    if(!itemTitleElm || !itemZaikoElm || !itemPriceElm || !itemImageElm || !itemIdElm || !itemDescElm || !itemGenreElm)return alert("エラー:商品情報入力フォームのDOMが見つかりません");
     if(itemTitleElm.value == "" || itemZaikoElm.value == "" || itemPriceElm.value == "" || itemImageElm.value == "")return alert("エラー:入力内容が不足しています");
 
     const formData = new FormData();
     formData.append("key", Settings.getApiKey());
-    formData.append("genre", "0");
+    formData.append("genre", itemGenreElm.selectedIndex.toString());
     formData.append("name", itemTitleElm.value);
     formData.append("desc", itemDescElm.value);
     formData.append("stock", itemZaikoElm.value);

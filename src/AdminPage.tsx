@@ -29,8 +29,9 @@ const loginCheck = () => {
 const AdminPage = () => {
     loginCheck();
     return (
-        <main>
-            認証中...
+        <main style={{textAlign:"center"}}>
+            通信中...<br/><br />
+            <img src="./images/spinning-circles-black.svg" width="60px"></img>
         </main>
     );
 }

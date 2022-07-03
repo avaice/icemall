@@ -10,7 +10,6 @@ const HomePage = () => {
         <main>
             <Carousel />
             <Recommend />
-            <Recent />
         </main>
     );
 }

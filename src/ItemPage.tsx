@@ -98,7 +98,7 @@ const ItemPage = () => {
                 {itemState.desc}
             </div>
 
-            <Relate genre={0}/>
+            <Relate genre={itemState.genre}/>
         </main>
     );
 }

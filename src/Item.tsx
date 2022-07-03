@@ -22,7 +22,7 @@ export interface ItemObject{
 const Item = (props:ItemType) => {
     return (
         <div className="item">
-            <a href={props.url} target="_blank" rel="noopener noreferrer"></a>
+            <a href={props.url}></a>
             {props.image
                 ? <img src={props.image}/>
                 : <img className="placeholder"/>
@@ -38,5 +38,22 @@ const Item = (props:ItemType) => {
         </div>
     );
 }
+
+export const _ItemPlaceHolder = <>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    <Item></Item>
+    </>
+
+
 
 export default Item;

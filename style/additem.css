@@ -39,6 +39,13 @@
     margin-right:0;
     width:50px;
 }
+#itemDetail #itemDetail_command #item_genre{
+    margin:10px 0px;
+    padding:8px;
+    font-size: 18px;
+    margin-right:0;
+    width:200px;
+}
 #itemDetail #itemDetail_command #item_price{
     font-weight: bold;
     font-size: 22px;
