@@ -17,7 +17,7 @@ const Header = () => {
             </div>
 
             <div id="header_navbar">
-                <a className="header_navbar_item" href="./category.html">カテゴリーから探す</a>
+                <a className="header_navbar_item" href="./category">カテゴリーから探す</a>
                 <a className="header_navbar_item" href="./recent">最近チェックした商品</a>
                 <a className="header_navbar_item" href="./mypage">マイページ</a>
             </div>

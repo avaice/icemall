@@ -46,7 +46,8 @@ const Recent = (props : RecentProps) => {
                     }
                     n++;
                     if(n == recent.length){
-                        setItemsList(_itemsList);
+                        if(_itemsList.length > 0)
+                            setItemsList(_itemsList);
                     }
                 }
             });

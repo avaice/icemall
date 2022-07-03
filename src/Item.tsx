@@ -40,18 +40,18 @@ const Item = (props:ItemType) => {
 }
 
 export const _ItemPlaceHolder = <>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
-    <Item></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
+    <Item key={Math.random().toString()}></Item>
     </>
 
 

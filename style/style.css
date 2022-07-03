@@ -159,6 +159,7 @@ main #main_slideshow img{
 .items{
     display:flex;
     overflow-x: scroll;
+    min-height:300px;
 }
 .items::-webkit-scrollbar{
     display: none;

@@ -5,6 +5,7 @@ import Header from './src/Header';
 import Footer from './src/Footer';
 
 import HomePage from './src/HomePage';
+import GenrePage from './src/GenrePage';
 import RecentPage from './src/RecentPage';
 import AddItemPage from './src/AddItemPage';
 import ItemPage from './src/ItemPage';
@@ -36,6 +37,7 @@ root.render(
         <BrowserRouter>
         <Routes>
             <Route path={Settings.basepath + "/"} element={<HomePage />} />
+            <Route path={Settings.basepath + "category"} element={<GenrePage />} />
             <Route path={Settings.basepath + "recent"} element={<RecentPage />} />
             <Route path={Settings.basepath + "item"} element={<ItemPage />} />
             <Route path={Settings.basepath + "login"} element={<LoginPage />} />

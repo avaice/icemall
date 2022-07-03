@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 import { useLocation } from 'react-router-dom';
-import Relate from './Relate';
+import ItemBox from './ItemBox';
 import Settings from './Settings';
 import "../style/item.css";
 import CircularJSON from 'circular-json';
@@ -98,7 +98,7 @@ const ItemPage = () => {
                 {itemState.desc}
             </div>
 
-            <Relate genre={itemState.genre}/>
+            <ItemBox title="関連する商品" reqParam={[["getCount", "12"], ["genre", itemState.genre.toString()]]}/>
         </main>
     );
 }

@@ -9,14 +9,12 @@ class Settings{
     static genre: any;
 
     static getGenreList = (callback: (arg0: any) => void) => {
-        if(!Settings.genre){
-            fetch(new Request(Settings.apipath + "database/genre.json")).then(response => response.json())
-            .then((data) => {
-                const result = JSON.parse(JSON.stringify(data));
-                Settings.genre = result;
-                callback(result);
-            });
-        }
+        fetch(new Request(Settings.apipath + "database/genre.json")).then(response => response.json())
+        .then((data) => {
+            const result = JSON.parse(JSON.stringify(data));
+            Settings.genre = result["genre"];
+            callback(Settings.genre);
+        });
     }
 
     static getApiKey = () => {

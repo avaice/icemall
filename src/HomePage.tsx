@@ -2,14 +2,13 @@ import React from 'react';
 
 
 import Carousel from './Carousel';
-import Recommend from './Recommend';
-import Recent from './Recent';
+import ItemBox from './ItemBox';
 
 const HomePage = () => {
     return (
         <main>
             <Carousel />
-            <Recommend />
+            <ItemBox title="おすすめ商品" reqParam={[["getCount", "12"]]}/>
         </main>
     );
 }

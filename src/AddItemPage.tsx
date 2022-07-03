@@ -48,7 +48,7 @@ const AddItemPage = () => {
         let selectEle = "";
         const selectDom = document.getElementById("item_genre");
         if(!selectDom)return alert("商品ジャンルの取得に失敗しました");
-        genreList["genre"].forEach((element:string) => {
+        genreList.forEach((element:string) => {
             selectEle = selectEle + `<option value=${n}>${element}</option>`;
             n++;
         });
